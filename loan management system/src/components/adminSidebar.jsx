@@ -29,7 +29,7 @@ function Sidebar({ open }) {
 
    function Logout() {
         localStorage.removeItem("Admin")
-        navigate("/App")
+        navigate("/About")
     }
 
   return (

@@ -28,8 +28,8 @@ function Header({ open, toggleDrawer, handleLogout }) {
     if (error) {
       console.log(error)
     } else {
-      navigate("/about")
       localStorage.removeItem("Session")
+      navigate("/about")
     }
     
   }

@@ -152,62 +152,6 @@ export default function LoanRequest() {
     }, [])
 
 
-    // return (
-    //     <Box sx={{ display: 'flex' }}>
-    //         <CssBaseline />
-    //         <Header open={open} toggleDrawer={toggleDrawer} />
-    //         <Sidebar open={open} />
-    //         <Box component="main" sx={{ flexGrow: 1, px: 3, pt: 2 }}>
-    //             <h4 style={{textAlign: "center" , fontSize: "40px" , fontFamily: "-moz-initial"}}>My Requests</h4>
-    //             {loading ? (
-    //                 <Box sx={{display: 'flex', justifyContent: 'center', mt: 4 }}>
-
-    //                     <CircularProgress />
-
-    //                 </Box>
-    //             ) : (
-    //                 <Table sx={{ mt: 5 }}>
-    //                     <TableHead>
-    //                         <TableRow sx={{ backgroundColor: '#1976d2' }}>
-    //                             <TableCell sx={{ color: 'white', fontWeight: 'bold', textAlign: "center" }}>Date</TableCell>
-    //                             <TableCell sx={{ color: 'white', fontWeight: 'bold', textAlign: "center" }}>Loan Amount</TableCell>
-    //                             <TableCell sx={{ color: 'white', fontWeight: 'bold', textAlign: "center" }}>Loan Type</TableCell>
-    //                             <TableCell sx={{ color: 'white', fontWeight: 'bold', textAlign: "center" }}>Duration</TableCell>
-    //                             <TableCell sx={{ color: 'white', fontWeight: 'bold', textAlign: "center" }}>Status</TableCell>
-    //                         </TableRow>
-    //                     </TableHead>
-    //                     <TableBody>
-    //                         {loandata.map((data, index) => (
-    //                             <TableRow key={index}>
-    //                                 <TableCell sx={{ textAlign: "center" }}>{data.created_at.slice(0, 10)}</TableCell>
-    //                                 <TableCell sx={{ textAlign: "center" }}>{data.LoanAmount}</TableCell>
-    //                                 <TableCell sx={{ textAlign: "center" }}>{data.LoanType}</TableCell>
-    //                                 <TableCell sx={{ textAlign: "center" }}>{data.Duration}</TableCell>
-    //                                 {/* <TableCell >{data.Status}</TableCell> */}
-    //                                 <TableCell sx={{ textAlign: "center" }}
-    //                                     style={{
-
-    //                                         color:
-    //                                             data.Status === "Pending"
-    //                                                 ? "black"
-    //                                                 : data.Status === "Approved"
-    //                                                     ? "green"
-    //                                                     : data.Status === "Rejected"
-    //                                                         ? "red"
-    //                                                         : "inherit",
-    //                                         fontWeight: "bold"
-    //                                     }}
-    //                                 >
-    //                                     {data.Status}
-    //                                 </TableCell>
-    //                             </TableRow>
-    //                         ))}
-    //                     </TableBody>
-    //                 </Table>
-    //             )}
-    //         </Box>
-    //     </Box>
-    // );
 
     return (
         <>

@@ -14,6 +14,7 @@ import { Gauge } from '@mui/x-charts/Gauge';
 import { LineChart } from '@mui/x-charts/LineChart';
 import { CircularProgress } from '@mui/material';
 import { BarChart } from '@mui/x-charts/BarChart';
+// import Spline from '@splinetool/react-spline/next';
 
 
 
@@ -54,10 +55,6 @@ export const PendingLoans = () => {
         } 
     }
 
-    const fetchAllUsers = async () => {
-       
-    }
-
     useEffect(() => {
         fetchAllLoans()
         const subscription = supabase
@@ -79,7 +76,7 @@ export const PendingLoans = () => {
 
     useEffect(() => {
         if (!getAdmin) {
-            navigate("/Admin")
+            navigate("/About")
         }
 
     });

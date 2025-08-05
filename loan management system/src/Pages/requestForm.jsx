@@ -4,8 +4,6 @@ import { supabase } from '/supabaseclient';
 import { Container, Row, Col } from "react-bootstrap";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Link } from 'react-router'
-// import { Box, CssBaseline } from '@mui/material';
 import Header from '../components/header';
 import Sidebar from '../components/Sidebar';
 import Box from '@mui/material/Box';
@@ -152,9 +150,7 @@ export default function RequestForm() {
                                     const stepProps = {};
                                     const labelProps = {};
                                     if (isStepOptional(index)) {
-                                        // labelProps.optional = (
-                                        //   <Typography variant="caption">Optional</Typography>
-                                        // );
+                                      
                                     }
                                     if (isStepSkipped(index)) {
                                         stepProps.completed = false;

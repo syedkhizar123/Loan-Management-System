@@ -25,7 +25,7 @@ function Header({ open, toggleDrawer, handleLogout }) {
 
     function Logout() {
         localStorage.removeItem("Admin")
-        navigate("/App")
+        navigate("/About")
     }
 
     

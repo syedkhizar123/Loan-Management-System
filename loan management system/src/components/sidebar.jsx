@@ -126,9 +126,9 @@ function Sidebar({ open }) {
           <PostAddIcon style={{ color: 'white' }} />
         </Link>
 
-        <Link to="/Admin" className="icon-wrapper" title="Admin Dashboard">
+        {/* <Link to="/Admin" className="icon-wrapper" title="Admin Dashboard">
           <DashboardIcon style={{ color: 'white' }} />
-        </Link>
+        </Link> */}
       </div>
     </>
   );

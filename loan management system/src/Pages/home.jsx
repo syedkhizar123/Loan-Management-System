@@ -3,9 +3,9 @@ import { Link } from "react-router"
 import { supabase } from '/supabaseclient';
 import { useNavigate } from "react-router";
 import Swal from 'sweetalert2'
+import { TextField } from "@mui/material";
 
-let data;
-let dataarr = [];
+
 export default function Home() {
     const navigate = useNavigate()
 
@@ -19,7 +19,7 @@ export default function Home() {
     }, []);
     const [email, setemail] = useState("")
     const [password, setpassword] = useState("")
-   
+
     const signUp = async () => {
         if (email === "" || password === "") {
             Swal.fire({
@@ -50,8 +50,8 @@ export default function Home() {
                     draggable: true
                 });
                 setTimeout(() => {
-                    navigate("/about")
-                }, 2000)
+                    navigate("/App")
+                }, 1000)
             }
             setemail("")
             setpassword("")
@@ -63,7 +63,8 @@ export default function Home() {
         <>
             <div
                 style={{
-                    width: "100%",
+                    width: "95%",
+                    margin: "0px auto",
                     minHeight: '100vh',
                     display: 'flex',
                     alignItems: 'center',
@@ -75,55 +76,54 @@ export default function Home() {
                     style={{
                         height: "auto",
                         width: "350px",
-                        border: "2px solid #ccc",
-                        borderRadius: "12px",
+                        borderRadius: "5px",
                         padding: "30px 25px",
-                        backgroundColor: "#edf7f7",
+                        backgroundColor: "rgba( 0 , 0 , 0 , 0.9 )",
                         boxShadow: "0 8px 20px rgba(0, 0, 0, 0.1)"
                     }}
                 >
-                    <h1 style={{ textAlign: "center", marginBottom: "50px", color: "#1976d2" }}>Sign Up</h1>
+                    <h1 style={{ textAlign: "center", marginBottom: "30px", color: "white" }}>SIGN UP</h1>
 
                     <div style={{ marginBottom: "25px" }}>
-                        <label htmlFor="email" style={{ fontWeight: "600", display: "block", marginBottom: "8px" }}>
-                            Email
-                        </label>
-                        <input
+                       
+                        <TextField
+
+                            label="Email"
+                            variant="standard"
                             type="email"
                             id="email"
                             value={email}
                             onChange={(e) => setemail(e.target.value)}
-                            placeholder="Enter your email"
-                            style={{
-                                height: "40px",
+                            sx={{
                                 width: "100%",
-                                paddingLeft: "10px",
-                                border: "1.5px solid #ccc",
-                                borderRadius: "6px",
-                                fontSize: "14px",
-                                outlineColor: "#1976d2"
+                                "& .MuiInputLabel-root": { color: "white" },
+                                "& .MuiInputLabel-root.Mui-focused": { color: "white" },
+                                "& .MuiInput-underline:before": { borderBottomColor: "white" },
+                                "& .MuiInput-underline:hover:before": { borderBottomColor: "white" },
+                                "& .MuiInput-underline:after": { borderBottomColor: "white" },
+                                input: { color: "white" }
                             }}
                         />
                     </div>
 
-                    <div style={{ marginBottom: "30px" }}>
-                        <label htmlFor="password" style={{ fontWeight: "600", display: "block", marginBottom: "8px" }}>
-                            Password
-                        </label>
-                        <input
+                    <div style={{ marginBottom: "50px" }}>
+                       
+                        <TextField
+
+                            label="Password"
+                            variant="standard"
                             type="password"
                             id="password"
                             value={password}
                             onChange={(e) => setpassword(e.target.value)}
-                            placeholder="Enter your password"
-                            style={{
-                                height: "40px",
+                            sx={{
                                 width: "100%",
-                                paddingLeft: "10px",
-                                border: "1.5px solid #ccc",
-                                borderRadius: "6px",
-                                fontSize: "14px",
-                                outlineColor: "#1976d2"
+                                "& .MuiInputLabel-root": { color: "white" }, 
+                                "& .MuiInputLabel-root.Mui-focused": { color: "white" }, 
+                                "& .MuiInput-underline:before": { borderBottomColor: "white" }, 
+                                "& .MuiInput-underline:hover:before": { borderBottomColor: "white" },
+                                "& .MuiInput-underline:after": { borderBottomColor: "white" },
+                                input: { color: "white" } 
                             }}
                         />
                     </div>
@@ -133,24 +133,24 @@ export default function Home() {
                         style={{
                             width: "100%",
                             padding: "10px",
-                            backgroundColor: "#1976d2",
-                            color: "white",
+                            backgroundColor: "white",
+                            color: "black",
                             border: "none",
-                            borderRadius: "6px",
-                            fontWeight: "600",
-                            fontSize: "16px",
+                            fontWeight: "bolder",
+                            borderRadius: "2px",
+                            fontSize: "15px",
                             cursor: "pointer",
                             transition: "background-color 0.3s",
                         }}
-                        onMouseOver={(e) => e.target.style.backgroundColor = "#145ea8"}
-                        onMouseOut={(e) => e.target.style.backgroundColor = "#1976d2"}
+                        onMouseOver={(e) => { e.target.style.backgroundColor = "#145ea8"; e.target.style.color = "white" }}
+                        onMouseOut={(e) => { e.target.style.backgroundColor = "white"; e.target.style.color = "black" }}
                     >
-                        Sign Up
+                        SIGN UP
                     </button>
 
-                    <div style={{ marginTop: "20px", textAlign: "center", fontSize: "14px" }}>
+                    <div style={{ marginTop: "10px", textAlign: "center", fontSize: "14px" , color:"grey" }}>
                         Already have an account?{" "}
-                        <Link to="/about" style={{ color: "#1976d2", fontWeight: "bold", textDecoration: "none" }}>
+                        <Link to="/about" style={{ color: "white", fontWeight: "bold", textDecoration: "none" }}>
                             Log In
                         </Link>
                     </div>

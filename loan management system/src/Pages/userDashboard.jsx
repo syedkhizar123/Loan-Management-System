@@ -194,28 +194,28 @@ export const UserDashboard = () => {
 
 
                             <div style={{ textAlign: 'center', margin: "10px 0" }}>
-                                <CircularProgress variant="determinate" value={(approvedTotal / total) * 100} size={80} thickness={5} style={{ color: "#4caf50" }} />
+                                <CircularProgress variant="determinate" value={(approved.length / loandata.length) * 100} size={80} thickness={5} style={{ color: "#4caf50" }} />
                                 <div style={{ display: "flex", flexDirection: "column" }}>
                                     <p style={{ marginTop: "10px", fontWeight: "bold" }}>Approved</p>
-                                    <p>{((approvedTotal / total) * 100).toFixed(1)}%</p>
+                                    <p>{((approved.length / loandata.length) * 100).toFixed(1)}%</p>
                                 </div>
                             </div>
 
 
                             <div style={{ textAlign: 'center', margin: "10px 0" }}>
-                                <CircularProgress variant="determinate" value={(pendingTotal / total) * 100} size={80} thickness={5} style={{ color: "orange" }} />
+                                <CircularProgress variant="determinate" value={(pending.length / loandata.length) * 100} size={80} thickness={5} style={{ color: "orange" }} />
                                 <div style={{ display: "flex", flexDirection: "column" }}>
                                     <p style={{ marginTop: "10px", fontWeight: "bold" }}>Pending</p>
-                                    <p>{((pendingTotal / total) * 100).toFixed(1)}%</p>
+                                    <p>{((pending.length / loandata.length) * 100).toFixed(1)}%</p>
                                 </div>
                             </div>
 
 
                             <div style={{ textAlign: 'center', margin: " 10px 0" }}>
-                                <CircularProgress variant="determinate"  value={(rejectedTotal / total) * 100} size={80} thickness={5} style={{ color: "#f44336" }} />  
+                                <CircularProgress variant="determinate"  value={(rejected.length / loandata.length) * 100} size={80} thickness={5} style={{ color: "#f44336" }} />  
                                 <div style={{ display: "flex", flexDirection: "column" }}>
                                     <p style={{ marginTop: "10px", fontWeight: "bold" }}>Rejected</p>
-                                    <p>{((rejectedTotal / total) * 100).toFixed(1)}%</p>
+                                    <p>{((rejected.length / loandata.length) * 100).toFixed(1)}%</p>
                                 </div>
                             </div>
 
