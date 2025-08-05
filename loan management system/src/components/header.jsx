@@ -28,14 +28,14 @@ function Header({ open, toggleDrawer, handleLogout }) {
     if (error) {
       console.log(error)
     } else {
-      navigate("/")
+      navigate("/about")
       localStorage.removeItem("Session")
     }
     
   }
 
   return (
-    <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
+    <AppBar  position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 , backgroundColor: "rgb( 31 , 31 , 31 )" }}>
       <Toolbar>
 
         <IconButton

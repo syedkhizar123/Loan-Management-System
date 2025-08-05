@@ -1,5 +1,10 @@
-// import { Link } from 'react-router';
-// import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+// import React from 'react';
+// import AccessTimeIcon from '@mui/icons-material/AccessTime';
+// import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+// import CancelIcon from '@mui/icons-material/Cancel';
+// import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
+import { FaHome, FaChartPie, FaList, FaSignOutAlt } from 'react-icons/fa';
 // import {
 //   Drawer,
 //   List,
@@ -8,32 +13,27 @@
 //   ListItemText,
 //   Toolbar,
 // } from '@mui/material';
-// import DashboardIcon from '@mui/icons-material/Dashboard';
-// import AssignmentIcon from '@mui/icons-material/Assignment';
-// import PostAddIcon from '@mui/icons-material/PostAdd';
-import { FaHome, FaChartPie, FaList, FaSignOutAlt } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import AssignmentIcon from '@mui/icons-material/Assignment';
-import PostAddIcon from '@mui/icons-material/PostAdd';
-
 
 
 // const drawerWidth = 240;
-
-
-
 // const navItems = [
-//   { text: 'Dashboard', icon: <DashboardIcon />, path: "/App" },
-//   { text: 'My Requests', icon: <AssignmentIcon />, path: "/loanRequest" },
-//   { text: 'Request Loan', icon: <PostAddIcon />, path: "/form" },
-//   { text: 'Admin Dashboard', icon: <DashboardIcon />, path: "/Admin" },
+//   { text: 'Pending', icon: <AccessTimeIcon />, path: "/pending" },
+//   { text: 'Approved', icon: <CheckCircleIcon />, path: "/approved" },
+//   { text: 'Rejected', icon: <CancelIcon />, path: "/rejected" },
+//   { text: 'Answered', icon: <ChatBubbleIcon />, path: "/answered" },
 // ];
 
 function Sidebar({ open }) {
-  // const [selectedItem, setSelectedItem] = useState('Dashboard');
+
+      const navigate = useNavigate()
+
+   function Logout() {
+        localStorage.removeItem("Admin")
+        navigate("/App")
+    }
 
   return (
+
 
     // <Drawer
     //   variant="persistent"
@@ -70,6 +70,14 @@ function Sidebar({ open }) {
     //               },
     //             }}
     //           >
+    //             <ListItemIcon
+    //               sx={{
+    //                 color: isActive ? '#1976d2' : 'inherit',
+    //                 minWidth: '35px',
+    //               }}
+    //             >
+    //               {item.icon}
+    //             </ListItemIcon>
     //             <ListItemText primary={item.text} />
     //           </ListItem>
     //         );
@@ -95,7 +103,7 @@ function Sidebar({ open }) {
         }
       </style>
 
-      <div className="thin-sidebar  mt-5 " style={{
+      <div className="thin-sidebar   mt-5" style={{
         position: "fixed",
         // left: "20px",
         borderRadius: "5px",
@@ -114,42 +122,18 @@ function Sidebar({ open }) {
         boxShadow: "2px 0 5px rgba(0, 0, 0, 0.1)",
         zIndex: "100", textAlign: "center"
       }}>
-        <Link to="/App" className="icon-wrapper" title="Dashboard">
-          <DashboardIcon style={{ color: 'white' }} />
+        <Link to="/pending">
+          <div className="icon-wrapper"><FaHome title="Dashboard" /></div>
         </Link>
+        <Link to="/approved">
+          <div className="icon-wrapper"><FaChartPie title="Analytics" /></div>
+        </Link>
+        
 
-        <Link to="/loanRequest" className="icon-wrapper" title="My Requests">
-          <AssignmentIcon style={{ color: 'white' }} />
-        </Link>
-
-        <Link to="/form" className="icon-wrapper" title="Request Loan">
-          <PostAddIcon style={{ color: 'white' }} />
-        </Link>
-
-        <Link to="/Admin" className="icon-wrapper" title="Admin Dashboard">
-          <DashboardIcon style={{ color: 'white' }} />
-        </Link>
+        <div className="icon-wrapper"><FaSignOutAlt title="Logout" onClick={Logout} /></div>
       </div>
     </>
   );
 }
 
 export default Sidebar;
-
-
-
-
-
-
-
-
-// export const Sidebar = () => {
-//   return (
-//     <>
-//     </>
-//   )
-// }
-
-
-
-

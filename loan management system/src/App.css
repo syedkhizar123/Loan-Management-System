@@ -1,10 +1,15 @@
-#root {
+ /* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
-}
+   /* text-align: center;  
+/* }   
 
+.css-17fpwt7-MuiGrid-root {
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0px auto;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -39,4 +44,8 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+.rowhover:hover{
+  background-color: blue;
 }

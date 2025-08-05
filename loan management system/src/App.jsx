@@ -1,14 +1,11 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { supabase } from '../supabaseclient'
 import { useNavigate } from 'react-router-dom'
-import React from 'react';
 import { Box, CssBaseline } from '@mui/material';
 import Header from './components/header';
-import Sidebar from './components/sidebar';
-import DashboardContent from './components/dashboard';
+import Sidebar from './components/Sidebar';
+// import DashboardContent from './components/dashboard';
 
 
 
@@ -50,7 +47,7 @@ function App() {
 
   return (
     <>
-      <div>
+      {/* <div>
         <nav>
         <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -60,10 +57,10 @@ function App() {
         <DashboardContent />       
       </Box>
     </Box>
-         
-    {/* <button style={{ border: "2px solid white", borderRadius: "10px", padding: "10px 30px" , backgroundColor: "red" , color : "white" }}  onClick={logOut}>Log Out</button> */}
         </nav>
-      </div>
+      </div> */}
+      <Header open={open} toggleDrawer={toggleDrawer} />
+      <Sidebar open={open} />
     </>
   )
 }

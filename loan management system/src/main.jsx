@@ -9,7 +9,14 @@ import About from './Pages/About.jsx'
 import NotFound from './Pages/NotFound.jsx'
 import LoanRequest from './Pages/loanRequest.jsx'
 import RequestForm from './Pages/requestForm.jsx'
-// import { AboutItems } from './Pages/About.jsx'
+import AdminLogin from './Pages/adminLogin.jsx'
+import { UserDashboard } from './Pages/userDashboard.jsx'
+import { PendingLoans } from './Pages/pending.jsx'
+import ApprovedLoans from './Pages/approved.jsx'
+import RejectedLoans from './Pages/rejected.jsx'
+import AnsweredLoans from './Pages/answered.jsx'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const router = createBrowserRouter([
   {
@@ -30,7 +37,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/App",
-    element: <App />
+    element: <UserDashboard />
   },
   {
     path: "/loanRequest",
@@ -39,7 +46,28 @@ const router = createBrowserRouter([
   {
     path: "/form",
     element: <RequestForm />
+  },
+  {
+    path: "/Admin",
+    element: <AdminLogin />
+  },
+  {
+    path: "/pending",
+    element: <PendingLoans />
+  },
+  {
+    path: "/approved",
+    element: <ApprovedLoans />
+  },
+  {
+    path: "/rejected",
+    element: <RejectedLoans />
+  },
+  {
+    path: "/answered",
+    element: <AnsweredLoans />
   }
+  
 ])
 
 createRoot(document.getElementById('root')).render(
