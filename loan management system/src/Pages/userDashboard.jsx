@@ -127,6 +127,7 @@ export const UserDashboard = () => {
             `
                 }
             </style>
+
             <Header className='mb-5' ></Header>
             <Sidebar  ></Sidebar>
             <Container style={{ marginTop: "100px" }} className='paddingContainer mb-3'>
@@ -212,7 +213,7 @@ export const UserDashboard = () => {
 
 
                             <div style={{ textAlign: 'center', margin: " 10px 0" }}>
-                                <CircularProgress variant="determinate"  value={(rejected.length / loandata.length) * 100} size={80} thickness={5} style={{ color: "#f44336" }} />  
+                                <CircularProgress variant="determinate" value={(rejected.length / loandata.length) * 100} size={80} thickness={5} style={{ color: "#f44336" }} />
                                 <div style={{ display: "flex", flexDirection: "column" }}>
                                     <p style={{ marginTop: "10px", fontWeight: "bold" }}>Rejected</p>
                                     <p>{((rejected.length / loandata.length) * 100).toFixed(1)}%</p>

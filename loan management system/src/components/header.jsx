@@ -15,6 +15,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
+
 // const navigate = useNavigate()
 // let session = localStorage.getItem("Session")
 
@@ -39,6 +40,7 @@ function Header({ open, toggleDrawer, handleLogout }) {
       <Toolbar>
 
         <IconButton
+          
           color="inherit"
           aria-label="open drawer"
           onClick={toggleDrawer}
@@ -55,10 +57,10 @@ function Header({ open, toggleDrawer, handleLogout }) {
 
 
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <LogoutIcon sx={{ mr: 1, cursor: 'pointer' }} />
-          <Button color="inherit" onClick={logOut}>
+          <LogoutIcon sx={{ mr: 1, cursor: 'pointer' }} onClick={logOut} />
+          {/* <Button color="inherit" onClick={logOut}>
             Logout
-          </Button>
+          </Button> */}
         </Box>
       </Toolbar>
     </AppBar>

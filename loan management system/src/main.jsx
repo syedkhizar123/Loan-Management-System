@@ -14,6 +14,8 @@ import ApprovedLoans from './Pages/approved.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -56,6 +58,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-  <RouterProvider router={router} />
+      <RouterProvider router={router} />
   </StrictMode>,
 )
