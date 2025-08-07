@@ -5,6 +5,7 @@ import { useNavigate } from "react-router";
 import { supabase } from '/supabaseclient';
 import Swal from 'sweetalert2'
 import { TextField } from "@mui/material";
+import Spinner from 'react-bootstrap/Spinner';
 
 
 export default function About() {
@@ -167,7 +168,7 @@ export default function About() {
                         onMouseOut={(e) => { e.target.style.backgroundColor = "white"; e.target.style.color = "black" }}
 
                     >
-                        LOGIN
+                        LOGIN 
                     </button>
 
                     <div style={{ marginTop: "10px", textAlign: "center", fontSize: "14px", color: "grey" }}>
